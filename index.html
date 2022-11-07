@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Timesheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+       <script src="https://kit.fontawesome.com/bad3486711.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Time Sheet Calculator</h1>
+    <table class="table table-striped text-center" style="width: 70%;margin: auto; margin-top:8%;">
+        <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col th-sm text-center" >Starting Time</th>
+              <th scope="col th-sm">Ending Time</th>
+              <th scope="col th-sm " style="width: 15%;">Break Deduction</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+              <td class="td2" >
+                <div class="container">
+                <div class="row" style="margin-left: 30%;">
+                    
+                       <input style="width:25%;" id="msh"  class="form-control" type="number" value=""  aria-label="default input example">‎ : ‎<input style="width:25%; " id="msm" class="form-control" type="number" value=""  aria-label="default input example"> 
+                       <select id="msap" class="form-select" style="width:32%" aria-label="Default select example">
+                          <option selected value="1">AM</option>
+                           <option value="2">PM</option>
+                       </select>
+                     
+                </div>
+              </div> 
+            </td>
+            <td class="td2" >
+              <div class="container">
+              <div class="row" style="margin-left: 30%;">
+                  
+                     <input style="width:25%;" id="meh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="mem" class="form-control" type="number"  aria-label="default input example"> 
+                     <select id="meap" class="form-select" style="width:32%" aria-label="Default select example">
+                        <option selected value="1">AM</option>
+                         <option value="2">PM</option>
+                     </select>
+                   
+              </div>
+            </div> 
+          </td>
+          <td class="td2" >
+            <div class="container">
+            <div class="row" style="margin-left: 3%;">
+              <input style="width:45%;" id="mbh" value="0"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:45%; " value="0" id="mbm" class="form-control" type="number"  aria-label="default input example"> 
+            </div>
+          </div> 
+        </td>
+              <td id="mth">0:0</td>
+            </tr>
+            <tr id="whitetr">
+              <th scope="row">Tuesday</th>
+              <td id="td2">
+                <div class="container">
+                <div class="row" style="margin-left: 30%;">
+                    
+                       <input style="width:25%;" id="tsh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="tsm" class="form-control" type="number"  aria-label="default input example"> 
+                       <select id="tsap" class="form-select" style="width:32%" aria-label="Default select example">
+                          <option selected value="1">AM</option>
+                           <option value="2">PM</option>
+                       </select>
+                     
+                </div>
+              </div> 
+              </td>
+              <td class="td2" >
+                <div class="container">
+                <div class="row" style="margin-left: 30%;">
+                    
+                       <input style="width:25%;" id="teh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="tem" class="form-control" type="number"  aria-label="default input example"> 
+                       <select id="teap" class="form-select" style="width:32%" aria-label="Default select example">
+                          <option selected value="1">AM</option>
+                           <option value="2">PM</option>
+                       </select>
+                     
+                </div>
+              </div> 
+            </td>
+            <td class="td2" >
+              <div class="container">
+              <div class="row" style="margin-left: 3%;">
+                <input style="width:45%;" id="tbh"  class="form-control" value="0" type="number"  aria-label="default input example">‎ : ‎<input style="width:45%; " id="tbm" value="0" class="form-control" type="number"  aria-label="default input example"> 
+              </div>
+            </div> 
+          </td>
+              <td id="tth">0:0</td>
+            </tr>
+            <tr>
+              <th scope="row">Wednesday</th>
+              <td id="td2">
+                <div class="container">
+                  <div class="row" style="margin-left: 30%;">
+                      
+                         <input style="width:25%;" id="wsh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="wsm" class="form-control" type="number"  aria-label="default input example"> 
+                         <select id="wsap" class="form-select" style="width:32%" aria-label="Default select example">
+                            <option selected value="1">AM</option>
+                             <option value="2">PM</option>
+                         </select>
+                       
+                  </div>
+                </div> 
+              </td>
+              <td class="td2" >
+                <div class="container">
+                <div class="row" style="margin-left: 30%;">
+                    
+                       <input style="width:25%;" id="weh" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%;" id="wem" class="form-control" type="number"  aria-label="default input example"> 
+                       <select id="weap" class="form-select" style="width:32%" aria-label="Default select example">
+                          <option selected value="1">AM</option>
+                           <option value="2">PM</option>
+                       </select>
+                     
+                </div>
+              </div> 
+            </td>
+            <td class="td2" >
+              <div class="container">
+              <div class="row" style="margin-left: 3%;">
+                <input style="width:45%;"  id="wbh" value="0" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input id="wbm" value="0" style="width:45%; " class="form-control" type="number"  aria-label="default input example"> 
+              </div>
+            </div> 
+          </td>
+              <td id="wth">0:0</td>
+            </tr>
+            <tr id="whitetr">
+                <th scope="row">Thursday</th>
+                <td id="td2">
+                  <div class="container">
+                    <div class="row" style="margin-left: 30%;">
+                        
+                           <input style="width:25%;" id="thsh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="thsm" class="form-control" type="number"  aria-label="default input example"> 
+                           <select id="thsap" class="form-select" style="width:32%" aria-label="Default select example">
+                              <option selected value="1">AM</option>
+                               <option value="2">PM</option>
+                           </select>
+                         
+                    </div>
+                  </div> 
+                </td>
+                <td class="td2" >
+                  <div class="container">
+                  <div class="row" style="margin-left: 30%;">
+                      
+                         <input style="width:25%;" id="theh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="them" class="form-control" type="number"  aria-label="default input example"> 
+                         <select id="theap" class="form-select" style="width:32%" aria-label="Default select example">
+                            <option selected value="1">AM</option>
+                             <option value="2">PM</option>
+                         </select>
+                       
+                  </div>
+                </div> 
+              </td>
+              <td class="td2" >
+                <div class="container">
+                <div class="row" style="margin-left: 3%;">
+                  <input style="width:45%;" id="thbh" value="0"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:45%; " id="thbm" value="0" class="form-control" type="number"  aria-label="default input example"> 
+                </div>
+              </div> 
+            </td>
+                <td id="thth">0:0</td>
+              </tr>
+              <tr>
+                <th scope="row">Friday</th>
+                <td id="td2">
+                  <div class="container">
+                    <div class="row" style="margin-left: 30%;">
+                        
+                           <input style="width:25%;" id="frsh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="frsm" class="form-control" type="number"  aria-label="default input example"> 
+                           <select id="frsap" class="form-select" style="width:32%" aria-label="Default select example">
+                              <option selected value="1">AM</option>
+                               <option value="2">PM</option>
+                           </select>
+                         
+                    </div>
+                  </div> 
+                </td>
+                <td class="td2" >
+                  <div class="container">
+                  <div class="row" style="margin-left: 30%;">
+                      
+                         <input style="width:25%;" id="freh"  class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="frem" class="form-control" type="number"  aria-label="default input example"> 
+                         <select id="freap" class="form-select" style="width:32%" aria-label="Default select example">
+                            <option selected value="1">AM</option>
+                             <option value="2">PM</option>
+                         </select>
+                       
+                  </div>
+                </div> 
+              </td>
+              <td class="td2" >
+                <div class="container">
+                <div class="row" style="margin-left: 3%;">
+                  <input style="width:45%;" id="frbh" class="form-control" value="0" type="number"  aria-label="default input example">‎ : ‎<input style="width:45%; " value="0" id="frbm" class="form-control" type="number"  aria-label="default input example"> 
+                </div>
+              </div> 
+            </td>
+                <td id="frth">0:0</td>
+                
+              </tr>
+              <tr id="whitetr"> 
+                <th scope="row">Saturday</th>
+                <td id="td2">
+                  <div class="container">
+                    <div class="row" style="margin-left: 30%;">
+                        
+                           <input style="width:25%;" id="ssh" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="ssm" class="form-control" type="number"  aria-label="default input example"> 
+                           <select id="ssap" class="form-select" style="width:32%" aria-label="Default select example">
+                              <option selected value="1">AM</option>
+                               <option value="2">PM</option>
+                           </select>
+                         
+                    </div>
+                  </div> 
+                </td>
+                <td class="td2" >
+                  <div class="container">
+                  <div class="row" style="margin-left: 30%;">
+                      
+                         <input style="width:25%;" id="seh" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="sem" class="form-control" type="number"  aria-label="default input example"> 
+                         <select id="seap" class="form-select" style="width:32%" aria-label="Default select example">
+                            <option selected value="1">AM</option>
+                             <option value="2">PM</option>
+                         </select>
+                       
+                  </div>
+                </div> 
+              </td>
+              <td class="td2" >
+                <div class="container">
+                <div class="row" style="margin-left: 3%;">
+                  <input style="width:45%;" id="sbh" value="0" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:45%; " value="0" id="sbm" class="form-control" type="number"  aria-label="default input example"> 
+                </div>
+              </div> 
+            </td>
+                <td id="stth">0:0</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">Sunday</th>
+                <td id="td2">
+                  <div class="container">
+                    <div class="row" style="margin-left: 30%;">
+                        
+                           <input style="width:25%;" id="sush" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="susm" class="form-control" type="number"  aria-label="default input example"> 
+                           <select id="susap" class="form-select" style="width:32%" aria-label="Default select example">
+                              <option selected value="1">AM</option>
+                               <option value="2">PM</option>
+                           </select>
+                         
+                    </div>
+                  </div> 
+                </td>
+                <td class="td2" >
+                  <div class="container">
+                  <div class="row" style="margin-left: 30%;">
+                      
+                         <input style="width:25%;" id="sueh" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:25%; " id="suem" class="form-control" type="number"  aria-label="default input example"> 
+                         <select id="sueap" class="form-select" style="width:32%" aria-label="Default select example">
+                            <option selected value="1">AM</option>
+                             <option value="2">PM</option>
+                         </select>
+                       
+                  </div>
+                </div> 
+              </td>
+              <td class="td2" >
+                <div class="container">
+                <div class="row" style="margin-left: 3%;">
+                  <input style="width:45%;" id="subh" value="0" class="form-control" type="number"  aria-label="default input example">‎ : ‎<input style="width:45%; " value="0" id="subm" class="form-control" type="number"  aria-label="default input example"> 
+                </div>
+              </div> 
+            </td>
+                <td id="sutth">0:0</td>
+                
+              </tr>
+              <tr id="whitetr">
+                <th scope="row"></th>
+                <td id="td2"></td>
+                </td>
+                <td ></td>
+                <td>TOTAL HOURS:</td>
+                <td style="color:black;" id="totalth">0:0</td>
+                
+              </tr>
+          </tbody>
+    </table>
+    <script src="index.js"></script>
+    <br >
+    <button type="button" onclick="getsval()" class="btn btn-secondary btn-lg" style="margin-left:15%"><i class="fa-solid fa-calculator"></i> Calculate</button>
+    <button type="button" onclick="clearall()" class="btn btn-secondary btn-lg"><i class="fa-solid fa-circle-xmark"></i> Clear all</button>
+    
+</body>
+
+</html>
